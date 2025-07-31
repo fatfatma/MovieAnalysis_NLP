@@ -1,66 +1,61 @@
 # 🎬 MovieAnalysis_NLP
 
-This is a simple Natural Language Processing (NLP) project that analyzes **Turkish movie reviews** and predicts whether they are **positive or negative** using a **BERT-based model**.
+This is a simple Natural Language Processing (NLP) project that analyzes **Turkish movie reviews** and predicts whether they are **positive or negative**. I used a **BERT-based model** and trained it on a small dataset.
 
 ---
 
-## 🧩 What This Project Does
+## 🧩 What this project does
 
-- Loads and cleans Turkish movie reviews (removes stopwords, punctuation, etc.)
-- Tokenizes text using Hugging Face's pre-trained Turkish BERT model
-- Trains a binary classification model (positive/negative)
-- Visualizes model performance (accuracy, loss, confusion matrix)
-- Saves the trained model for future use
-
----
-
-## 📌 Why I Made This
-
-I'm currently learning NLP and deep learning. Since my computer has limited resources, I worked with a **smaller dataset** and still achieved decent results by using **transfer learning**.
-
-This project helped me understand:
-- How to preprocess and clean text data
-- How to use pre-trained Transformer models (BERT)
-- How to evaluate NLP classification models
+- Loads and cleans movie reviews
+- Uses a pre-trained Turkish BERT model
+- Trains the model on labeled reviews (positive / negative)
+- Evaluates with accuracy, F1-score, and confusion matrix
+- Saves the trained model for later use
 
 ---
 
-## 🔍 Tools and Libraries Used
+## 🔍 Tools and Libraries
 
-| Library | Purpose |
-|--------|---------|
-| `pandas`, `numpy` | Data handling and manipulation |
-| `re`, `string` | Text cleaning |
-| `nltk` | Stopword removal and tokenization |
-| `scikit-learn` | Evaluation metrics like confusion matrix, classification report |
-| `matplotlib`, `seaborn` | Visualization of model training and results |
-| `transformers`, `datasets` | Pre-trained BERT model, tokenization, training |
-| `gc`, `random` | Resource management and reproducibility |
+- Python
+- PyTorch (via Hugging Face Transformers)
+- scikit-learn
+- matplotlib
+- pandas
+- numpy
 
-Install required libraries:
----
+Install required libraries with:
+
+
 📊 Results
-Although I trained the model on a limited dataset, the performance was promising:
-Accuracy: about 0.84%
-F1-score: class 0: 0.83%, class 1: %0.85
-Loss & Accuracy Graphs: See /results/Loss_Accuracy_Graph.png
-Confusion Matrix: See /results/Confusion_Matrix.png
+Even though the training was performed on a limited dataset due to hardware limitations, the model achieved promising results:
+📈 Accuracy: 84%
+🎯 F1-score (Negative): 0.83
+🎯 F1-score (Positive): 0.85
+⚖️ Macro F1-score: 0.84
+📌 Precision (Negative): 0.85
+📌 Recall (Positive): 0.87
+🧪 Samples Evaluated: 1089
+<p align="center"> <img src="./Image/Confusion matrix.png" width="400" /> <br> <em>Confusion Matrix</em> </p> <p align="center"> <img src="./Image/Loss_Accuracy Graph.png" width="400" /> <br> <em>Loss & Accuracy Graph</em> </p>
 
-Note: Due to hardware limitations, I didn't train on the full dataset or apply heavy hyperparameter tuning. With better resources, performance can be further improved.
----
-📁 Dataset
-The dataset I used is a Turkish movie review dataset available on Kaggle. Due to license concerns, I haven’t uploaded it to this repository.
+📦 Dataset
+The dataset was downloaded from Kaggle, but due to licensing concerns, it is not included in this repository.
+https://www.kaggle.com/datasets/mustfkeskin/turkish-movie-sentiment-analysis-dataset
 
-https://www.kaggle.com/datasets/mustfkeskin/turkish-movie-sentiment-analysis-dataset 
 
-You can replace this link with the specific dataset link you used once you upload the project.
----
-🚀 How to Improve
-Use a larger and more diverse dataset
-Apply better hyperparameter tuning
-Try more advanced models like RoBERTa or LLaMA variants (if GPU is available)
-Include sentiment intensity (not just binary)
-Add experiment tracking (like WandB)
----
+🧠 Future Improvements
+Use a larger and more diverse dataset for better generalization
+Deploy the model as a web API or streamlit app
+Try different models such as DistilBERT or ELECTRA
+Perform hyperparameter tuning
+Add more explainability (e.g., word importance, attention weights)
+
+👩‍🎓 About the Author
+This project was created by a student interested in NLP and machine learning. The goal was to explore sentiment analysis in Turkish language using BERT models and improve deep learning skills.
+
 ```bash
-pip install pandas numpy scikit-learn matplotlib transformers datasets nltk
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Run the main script
+python main.py
+
