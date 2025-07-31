@@ -35,7 +35,7 @@ Even though the training was performed on a limited dataset due to hardware limi
 📌 Precision (Negative): 0.85
 📌 Recall (Positive): 0.87
 🧪 Samples Evaluated: 1089
-<p align="center"> <img src="./Image/Confusion matrix.png" width="400" /> <br> <em>Confusion Matrix</em> </p> <p align="center"> <img src="./Image/Loss_Accuracy Graph.png" width="400" /> <br> <em>Loss & Accuracy Graph</em> </p>
+
 
 📦 Dataset
 The dataset was downloaded from Kaggle, but due to licensing concerns, it is not included in this repository.
